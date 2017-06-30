@@ -211,6 +211,24 @@ datamodel.options.culvertslope = [
 	{key:"T", label:"TIMBER"},
 	{key:"O", label:"OTHERS"}
 ];
+
+//Traffic vehicle type
+
+datamodel.options.culvertslope = [
+	{key:"P", label:"MOTOR-TRICYCLE"},
+	{key:"S", label:"PASSENGER CAR"},
+	{key:"R", label:"PASSENGER UTILITY"},
+	{key:"M", label:"GOODS UTILITY"},
+	{key:"T", label:"SMALL BUS"},
+	{key:"O", label:"LARGE BUS"},
+    {key:"P", label:"RIGID TRUCK 2 AXLES"},
+	{key:"S", label:"RIGID TRUCK 3+ AXLES"},
+	{key:"R", label:"TRUCK SEMI-TRAILER 3 AND 4 AXLES"},
+	{key:"M", label:"TRUCK SEMI-TRAILER 5+ AXELS"},
+	{key:"T", label:"TRUCK TRAILER 4 AXLES"},
+	{key:"O", label:"TRUCK TRAILER 5+ AXLES"}
+];
+
 	
 //road
 datamodel.road = {
@@ -266,7 +284,7 @@ datamodel.RoadBridges = {
             "R_ID"          :{"label":"Road ID","key":"R_ID","type":"string","options":[],"visible":true,"style":"","ctrl":"label","class":"form-control"}, 
             "R_NAME"        : {"label":"Road Name","key":"R_NAME","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
             "Name"          :{"label":"Name","key":"Name","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
-            "Length"        :{"label":"Length(Km)","key":"Length","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"}, 
+            "Length"        :{"label":"Length(m)","key":"Length","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"}, 
             "TypeID"        :{"label":"Type Id","key":"TypeID","type":"String","options":datamodel.options.superstructuretype,"style":"","ctrl":"select","class":"form-control"}, 
             "LRPStartKm"    :{"label":"Km Post Start","key":"LRPStartKm","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
             "LRPStartDi"    :{"label":"","key":"LRPStartDi","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"}, 
@@ -562,6 +580,22 @@ datamodel.RoadSpillways = {
     "Length" : {"label":"Length(m)","key":"length","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"}        
 };
 
+ //Traffic
+datamodel.RoadTraffic = {
+    "R_ID"         : {"label":"Road ID","key":"R_ID","type":"string","options":[],"visible":true,"style":"","ctrl":"label","class":"form-control"},   
+    "LRPStartKm"   : {"label":"Start(Km)","key":"LRPStartKm","type":"string","options":[],"visible":true,"style":"","ctrl":"select","class":"form-control"},
+    "LRPStartDi"   : {"label":"","key":"LRPStartDi","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
+    "LRPEndKmPo"   : {"label":"End(Km)","key":"LRPEndKmPo","type":"string","options":[],"visible":true,"style":"","ctrl":"select","class":"form-control"},
+    "LRPEndDisp"   : {"label":"","key":"LRPEndDisp","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},        
+    "Cost"         : {"label":"Cost","key":"Cost","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
+    "Usefullife"   : {"label":"Useful Life","key":"Usefullife","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
+    "VehicleType"  : {"label":"Vehicle Type","key":"VehicleType","type":"string","options":datamodel.options.vehicletype,"visible":true,"style":"","ctrl":"select","class":"form-control"},        
+    "Date"         : {"label":"Date","key":"Date","type":"string","options":[],"visible":true,"style":"","ctrl":"date","class":"form-control"},
+    "From"         : {"label":"From","key":"From","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
+    "To"           : {"label":"To","key":"To","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},  
+    "FromDi"       : {"label":"","key":"FromDi","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"},
+    "ToDi"         : {"label":"","key":"ToDi","type":"string","options":[],"visible":true,"style":"","ctrl":"text","class":"form-control"}        
+};
 
 
 
